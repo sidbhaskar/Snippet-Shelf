@@ -63,8 +63,14 @@ class _DashboardState extends State<Dashboard> {
                                 horizontal: 16,
                                 vertical: 12,
                               ),
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(8),
+                                ),
+                              ),
                             ),
                           ),
+
                           const SizedBox(width: 12),
                           CustomButton(
                             function: () {},
