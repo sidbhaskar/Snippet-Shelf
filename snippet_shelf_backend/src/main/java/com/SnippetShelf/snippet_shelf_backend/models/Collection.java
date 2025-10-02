@@ -1,8 +1,9 @@
 package com.SnippetShelf.snippet_shelf_backend.models;
-
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 
@@ -17,41 +18,33 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "users")
-public class User {
+@Table(name = "collections")
+public class Collection {
 
     @Id
     @GeneratedValue
     @UuidGenerator
     private UUID id;
 
-    @Column(unique = true, nullable = false, length = 50)
-    private String username;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private User user;
 
-    @Column(unique = true, nullable = false)
-    private String email;
-
-    @Column(length = 100)
+    @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(name = "image_url")
-    private String imageUrl;
+    @Column(columnDefinition = "TEXT")
+    private String description;
 
-    @Column(name = "github_id", unique = true)
-    private String githubId;
+    @Column(length = 50)
+    private String icon;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private UserRole role;
+    @Column(length = 7)
+    private String color;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Collection> collections = new HashSet<>();
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "collection")
     private Set<Snippet> snippets = new HashSet<>();
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Comment> comments = new HashSet<>();
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
