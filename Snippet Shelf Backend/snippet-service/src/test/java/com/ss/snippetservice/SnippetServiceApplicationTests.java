@@ -1,13 +1,13 @@
-package com.ss.snippet_shelf_backend;
+package com.ss.snippetservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SnippetShelfBackendApplicationTests {
+class SnippetServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
