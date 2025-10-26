@@ -1,0 +1,11 @@
+### put request to update a snippet
+PUT http://localhost:4001/snippet/6929fe01-5a03-4ff1-aca1-86f28e50cc30
+Content-Type: application/json
+
+{
+  "title": "new",
+  "description": "testing 2",
+  "language": "java 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+###

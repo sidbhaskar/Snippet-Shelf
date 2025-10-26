@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-10-26T13:24:58.556+00:00",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "path": "/snippet"
+}

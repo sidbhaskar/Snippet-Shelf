@@ -5,40 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82721979-172e-4cb0-89b1-02f7c40a6a3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ss/snippet_shelf_backend/SnippetShelfBackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ss/snippet_shelf_backend/SnippetShelfBackendApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-snippet/create-snippet.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-snippet/delete-snippet.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-snippet/get-snippets.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-snippet/put-snippet.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/controller/SnippetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/model/Snippet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/repository/SnippetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/service/SnippetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/mapper/SnippetMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/resources/sql.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sidbhaskar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sidbhaskar&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sidbhaskar/Snippet-Shelf.git",
-    "accountId": "7005b5ff-039c-438a-9c69-ccc8bc9af9ae"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sidbhaskar/Snippet-Shelf.git&quot;,
+    &quot;accountId&quot;: &quot;7005b5ff-039c-438a-9c69-ccc8bc9af9ae&quot;
   }
+}</component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
 }]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -46,9 +65,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="34SmZ7f0YVqa4uPBigsSgrFx1Cb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,7 +75,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.snippet-service.executor": "Run",
+    "Docker.snippet-service.snippet-db: Compose Deployment.executor": "Run",
+    "Docker.snippet-service: Compose Deployment.executor": "Run",
     "Docker.snippet_db.executor": "Run",
+    "HTTP Request.create-snippet | POST request to create a new snippet.executor": "Run",
+    "HTTP Request.delete-snippet | DELETE request to remove a snippet.executor": "Run",
+    "HTTP Request.get-snippets | GET request to get all snippets.executor": "Run",
+    "HTTP Request.update-snippet | put request to update a snippet.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -64,11 +90,12 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.SnippetShelfBackendApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Personal Projects/Snippet Shelf/Snippet Shelf Backend",
+    "last_opened_file_path": "E:/Personal Projects/Snippet Shelf/Snippet Shelf Backend/snippet-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,54 +103,94 @@
     "nodejs_package_manager_path": "npm",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.SnippetShelfBackendApplication">
-    <configuration name="SnippetShelfBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="snippet_shelf_backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ss.snippet_shelf_backend.SnippetShelfBackendApplication" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Personal Projects\Snippet Shelf\Snippet Shelf Backend\snippet-service" />
+      <recent name="E:\Personal Projects\Snippet Shelf\Snippet Shelf Backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Personal Projects\Snippet Shelf\Snippet Shelf Backend\api-snippet" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="create-snippet | POST request to create a new snippet" value="STOPPED" />
+              <entry key="delete-snippet | DELETE request to remove a snippet" value="STOPPED" />
+              <entry key="get-snippets | GET request to get all snippets" value="STOPPED" />
+              <entry key="update-snippet | put request to update a snippet" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.delete-snippet | DELETE request to remove a snippet">
+    <configuration name="create-snippet | POST request to create a new snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/create-snippet.http" executionIdentifier="POST request to create a new snippet" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="delete-snippet | DELETE request to remove a snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/delete-snippet.http" executionIdentifier="DELETE request to remove a snippet" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="get-snippets | GET request to get all snippets" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/get-snippets.http" executionIdentifier="GET request to get all snippets" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="update-snippet | put request to update a snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/update-snippet.http" executionIdentifier="put request to update a snippet" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SnippetServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="snippet-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ss.snippetservice.SnippetServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="snippet_db" type="docker-deploy" factoryName="docker-image" server-name="Docker">
-      <deployment type="docker-image">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="snippet-service.snippet-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
         <settings>
-          <option name="imageTag" value="postgres:latest" />
-          <option name="containerName" value="snippet_db" />
-          <option name="envVars">
+          <option name="services">
             <list>
-              <DockerEnvVarImpl>
-                <option name="name" value="POSTGRES_DB" />
-                <option name="value" value="snippet_db" />
-              </DockerEnvVarImpl>
-              <DockerEnvVarImpl>
-                <option name="name" value="POSTGRES_PASSWORD" />
-                <option name="value" value="password" />
-              </DockerEnvVarImpl>
-              <DockerEnvVarImpl>
-                <option name="name" value="POSTGRES_USER" />
-                <option name="value" value="admin_user" />
-              </DockerEnvVarImpl>
+              <option value="snippet-db" />
             </list>
           </option>
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="5432" />
-                <option name="hostPort" value="5001" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="commandLineOptions" value="-v snippet_db_data:/var/lib/postgresql/data --network internal" />
+          <option name="sourceFilePath" value="snippet-service/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.snippet_db" />
-      <item itemvalue="Spring Boot.SnippetShelfBackendApplication" />
+      <item itemvalue="Docker.snippet-service.snippet-db: Compose Deployment" />
+      <item itemvalue="HTTP Request.create-snippet | POST request to create a new snippet" />
+      <item itemvalue="HTTP Request.delete-snippet | DELETE request to remove a snippet" />
+      <item itemvalue="HTTP Request.get-snippets | GET request to get all snippets" />
+      <item itemvalue="HTTP Request.update-snippet | put request to update a snippet" />
+      <item itemvalue="Spring Boot.SnippetServiceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.delete-snippet | DELETE request to remove a snippet" />
+        <item itemvalue="HTTP Request.update-snippet | put request to update a snippet" />
+        <item itemvalue="HTTP Request.create-snippet | POST request to create a new snippet" />
+        <item itemvalue="HTTP Request.get-snippets | GET request to get all snippets" />
+        <item itemvalue="Docker.snippet-service.snippet-db: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -140,7 +207,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761215402942</updated>
-      <workItem from="1761215404104" duration="3105000" />
+      <workItem from="1761215404104" duration="10534000" />
+      <workItem from="1761480750576" duration="4536000" />
     </task>
     <servers />
   </component>

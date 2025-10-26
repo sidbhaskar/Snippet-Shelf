@@ -1,0 +1,4 @@
+### GET request to get all snippets
+GET http://localhost:4001/snippet
+
+###

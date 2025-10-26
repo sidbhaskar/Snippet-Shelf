@@ -1,0 +1,12 @@
+### POST request to create a new snippet
+POST http://localhost:4001/snippet
+Content-Type: application/json
+
+{
+  "title": "Java Test Code 2",
+  "description": "testing 2",
+  "language": "sdgsg 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+
+###

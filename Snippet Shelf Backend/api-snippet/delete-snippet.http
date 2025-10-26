@@ -1,0 +1,4 @@
+### DELETE request to remove a snippet
+DELETE http://localhost:4001/snippet/3491868c-6588-4019-81b6-a31111408d76
+
+###

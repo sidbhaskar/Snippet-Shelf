@@ -1,0 +1,226 @@
+DELETE http://localhost:4001/snippet/3491868c-6588-4019-81b6-a31111408d76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:4001/3491868c-6588-4019-81b6-a31111408d76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-10-26T185749.404.json
+
+###
+
+PUT http://localhost:4001/snippet/6929fe01-5a03-4ff1-aca1-86f28e50cc30
+Content-Type: application/json
+Content-Length: 116
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new",
+  "description": "testing 2",
+  "language": "java 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+
+<> 2025-10-26T185600.200.json
+
+###
+
+PUT http://localhost:4001/snippet/6929fe01-5a03-4ff1-aca1-86f28e50cc30
+Content-Type: application/json
+Content-Length: 116
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new",
+  "description": "testing 2",
+  "language": "java 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+
+<> 2025-10-26T185528.200.json
+
+###
+
+PUT http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 164
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "id": "6929fe01-5a03-4ff1-aca1-86f28e50cc30",
+  "title": "new",
+  "description": "testing 2",
+  "language": "java 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+
+<> 2025-10-26T185458.405.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Test Code 2",
+  "description": "testing 2",
+  "language": "sdgsg 2 ",
+  "sourceCode": "hehe \"demo code\" 2 "
+}
+
+<> 2025-10-26T185039.200.json
+
+###
+
+GET http://localhost:4001/snippet
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T185034.200.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 121
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Test Code",
+  "description": "testing",
+  "language": "sdgsg",
+  "sourceCode": "hehe \"demo code\" "
+}
+
+<> 2025-10-26T184539.200.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 120
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Test Code",
+  "description": "testing",
+  "language": "Java",
+  "sourceCode": "hehe \"demo code\" "
+}
+
+<> 2025-10-26T184519.200.json
+
+###
+
+GET http://localhost:4001/snippet
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T183515.200.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 120
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Test Code",
+  "description": "testing",
+  "language": "Java",
+  "sourceCode": "hehe \"demo code\" "
+}
+
+<> 2025-10-26T183508.200.json
+
+###
+
+GET http://localhost:4001/snippet
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T183500.200.json
+
+###
+
+GET http://localhost:4001/snippet/check
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T183450.200.txt
+
+###
+
+GET http://localhost:4001/snippet/check
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T182400.200.txt
+
+###
+
+GET http://localhost:4001/check
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T182336.404.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 120
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Test Code",
+  "description": "testing",
+  "language": "Java",
+  "sourceCode": "hehe \"demo code\" "
+}
+
+<> 2025-10-26T181913.404.json
+
+###
+
+GET http://localhost:4001/snippet
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-26T181034.404.json
+
+###
+
