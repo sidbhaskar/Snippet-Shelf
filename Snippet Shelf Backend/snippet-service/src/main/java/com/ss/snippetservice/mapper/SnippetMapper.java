@@ -1,4 +1,4 @@
-package mapper;
+package com.ss.snippetservice.mapper;
 
 
 import com.ss.snippetservice.dto.SnippetRequestDTO;

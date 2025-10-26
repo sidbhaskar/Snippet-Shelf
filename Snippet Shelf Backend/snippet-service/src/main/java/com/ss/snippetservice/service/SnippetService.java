@@ -4,7 +4,7 @@ import com.ss.snippetservice.dto.SnippetRequestDTO;
 import com.ss.snippetservice.dto.SnippetResponseDTO;
 import com.ss.snippetservice.model.Snippet;
 import com.ss.snippetservice.repository.SnippetRepository;
-import mapper.SnippetMapper;
+import com.ss.snippetservice.mapper.SnippetMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
