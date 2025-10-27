@@ -1,0 +1,12 @@
+{
+  "id": "d59b2b5b-5c6d-460f-9878-ea8dc08fb60d",
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": [
+    "java"
+  ],
+  "createdDate": "2025-10-27",
+  "favorite": false
+}

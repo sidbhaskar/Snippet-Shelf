@@ -1,13 +1,18 @@
 package com.ss.snippetservice.dto;
 
+import java.util.List;
+
 public class SnippetResponseDTO {
     private String id;
     private String title;
     private String description;
     private String language;
     private String sourceCode;
+    private List<String> tags;
+    private boolean favorite;
     private String createdDate;
 
+    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -46,6 +51,22 @@ public class SnippetResponseDTO {
 
     public void setSourceCode(String sourceCode) {
         this.sourceCode = sourceCode;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
     }
 
     public String getCreatedDate() {

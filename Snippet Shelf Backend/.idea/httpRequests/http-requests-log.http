@@ -1,3 +1,420 @@
+GET http://localhost:4001/api/snippets/favorites
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221714.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+Content-Type: application/json
+Content-Length: 211
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "favorite": true
+}
+
+<> 2025-10-27T221707.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+Content-Type: application/json
+Content-Length: 213
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T221637.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/favorites
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221608.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+Content-Type: application/json
+Content-Length: 213
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T221604.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/favorites
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221557.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+Content-Type: application/json
+Content-Length: 214
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": false
+}
+
+<> 2025-10-27T221553.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/favorites
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221511.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221413.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T221350.200.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 248
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": false
+}
+
+<> 2025-10-27T221343.201.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 211
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "favorite": true
+}
+
+<> 2025-10-27T221305.201.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 213
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T215957.201.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 213
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T215628.201.json
+
+###
+
+PUT http://localhost:4001/api/snippets/38844082-c762-478c-8a75-4e840521bfd9
+Content-Type: application/json
+Content-Length: 135
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "A",
+  "description": "Us",
+  "language": "Jat",
+  "sourceCode": "con];",
+  "tags": ["javascript"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T215516.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/38844082-c762-478c-8a75-4e840521bfd9
+Content-Type: application/json
+Content-Length: 158
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "A",
+  "description": "Us",
+  "language": "Jat",
+  "sourceCode": "con];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T215434.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T215427.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T215220.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/38844082-c762-478c-8a75-4e840521bfd9
+Content-Type: application/json
+Content-Length: 158
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "A",
+  "description": "Us",
+  "language": "Jat",
+  "sourceCode": "con];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T215054.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/38844082-c762-478c-8a75-4e840521bfd9
+Content-Type: application/json
+Content-Length: 247
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": true
+}
+
+<> 2025-10-27T214920.200.json
+
+###
+
+PUT http://localhost:4001/api/snippets/6929fe01-5a03-4ff1-aca1-86f28e50cc30
+Content-Type: application/json
+Content-Length: 247
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": true
+}
+
+###
+
+GET http://localhost:4001/api/snippets/38844082-c762-478c-8a75-4e840521bfd9
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T214719.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T214716.200.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 215
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Java Code",
+  "description": "Useful array manipulation functions in java",
+  "language": "Java",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["java"],
+  "isFavorite": false
+}
+
+<> 2025-10-27T214449.201.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-10-27T214400.200.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Content-Type: application/json
+Content-Length: 248
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": false
+}
+
+<> 2025-10-27T214246.201.json
+
+###
+
+POST http://localhost:4001/snippet
+Content-Type: application/json
+Content-Length: 248
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "isFavorite": false
+}
+
+<> 2025-10-27T214102.500.json
+
+###
+
 DELETE http://localhost:4001/snippet/3491868c-6588-4019-81b6-a31111408d76
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
 Accept-Encoding: br, deflate, gzip, x-gzip

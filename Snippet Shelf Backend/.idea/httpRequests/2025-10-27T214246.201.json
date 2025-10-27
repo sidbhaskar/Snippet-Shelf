@@ -1,14 +1,14 @@
-### POST request to create a new snippet
-POST http://localhost:4001/api/snippets
-Content-Type: application/json
-
 {
+  "id": "38844082-c762-478c-8a75-4e840521bfd9",
   "title": "Array Utilities",
   "description": "Useful array manipulation functions",
   "language": "JavaScript",
   "sourceCode": "const unique = arr => [...new Set(arr)];",
-  "tags": ["javascript", "utilities", "arrays"],
+  "tags": [
+    "arrays",
+    "utilities",
+    "javascript"
+  ],
+  "createdDate": "2025-10-27",
   "favorite": false
 }
-
-###

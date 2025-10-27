@@ -3,16 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
+      <IntrospectionStateNumber>823</IntrospectionStateNumber>
       <ServerVersion>18.0</ServerVersion>
-      <StartupTime>1761484798</StartupTime>
+      <StartupTime>1761583338</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -706,6 +699,7 @@ true posixrules
 13293||10|C|G
 13293||-9223372036854775808|U|G
 13293||10|U|G</Grants>
+      <IntrospectionStateNumber>823</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>admin_user</OwnerName>
     </database>
@@ -4226,76 +4220,197 @@ true posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
+      <LastIntrospectionL1Xid>823</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>823</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>823</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-26.13:14:30</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-10-27.16:42:44</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <table id="273" parent="272" name="snippet">
+    <table id="273" parent="272" name="snippet_tags">
       <DetailsLevel>2</DetailsLevel>
-      <ObjectId>16389</ObjectId>
-      <StateNumber>785</StateNumber>
+      <ObjectId>65542</ObjectId>
+      <StateNumber>821</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>admin_user</OwnerName>
     </table>
-    <column id="274" parent="273" name="id">
+    <table id="274" parent="272" name="snippets">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>65549</ObjectId>
+      <StateNumber>822</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin_user</OwnerName>
+    </table>
+    <table id="275" parent="272" name="tags">
+      <DetailsLevel>2</DetailsLevel>
+      <ObjectId>65564</ObjectId>
+      <StateNumber>821</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin_user</OwnerName>
+    </table>
+    <column id="276" parent="273" name="snippet_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>767</StateNumber>
+      <StateNumber>816</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
-    <column id="275" parent="273" name="created_date">
+    <column id="277" parent="273" name="tag_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>767</StateNumber>
-      <StoredType>date|0s</StoredType>
-      <TypeId>1082</TypeId>
+      <StateNumber>816</StateNumber>
+      <StoredType>uuid|0s</StoredType>
+      <TypeId>2950</TypeId>
     </column>
-    <column id="276" parent="273" name="description">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>767</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="277" parent="273" name="language">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>785</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="278" parent="273" name="source_code">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>767</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="279" parent="273" name="title">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StateNumber>767</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="280" parent="273" name="snippet_pkey">
-      <ColNames>id</ColNames>
+    <foreign-key id="278" parent="273" name="fkwhgimw801nwvdnyh2wjgwlkm">
+      <ColNames>snippet_id</ColNames>
+      <ObjectId>65578</ObjectId>
+      <StateNumber>822</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>65549</RefTableId>
+    </foreign-key>
+    <foreign-key id="279" parent="273" name="fkek6klmyv70lj8x7c9vt3eun6r">
+      <ColNames>tag_id</ColNames>
+      <ObjectId>65573</ObjectId>
+      <StateNumber>821</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>65564</RefTableId>
+    </foreign-key>
+    <index id="280" parent="273" name="snippet_tags_pkey">
+      <ColNames>snippet_id
+tag_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16400</ObjectId>
+      <ObjectId>65547</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>785</StateNumber>
+      <StateNumber>816</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="281" parent="273" name="snippet_pkey">
+    <key id="281" parent="273" name="snippet_tags_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16401</ObjectId>
+      <ObjectId>65548</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>767</StateNumber>
-      <UnderlyingIndexId>16400</UnderlyingIndexId>
+      <StateNumber>816</StateNumber>
+      <UnderlyingIndexId>65547</UnderlyingIndexId>
+    </key>
+    <column id="282" parent="274" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>uuid|0s</StoredType>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="283" parent="274" name="created_date">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="284" parent="274" name="description">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>varchar(1000)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="285" parent="274" name="favorite">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="286" parent="274" name="language">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="287" parent="274" name="owner_id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>bigint|0s</StoredType>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="288" parent="274" name="source_code">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="289" parent="274" name="title">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>817</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="290" parent="274" name="snippets_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>65562</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>817</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="291" parent="274" name="snippets_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>65563</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>817</StateNumber>
+      <UnderlyingIndexId>65562</UnderlyingIndexId>
+    </key>
+    <column id="292" parent="275" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>818</StateNumber>
+      <StoredType>uuid|0s</StoredType>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="293" parent="275" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>818</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="294" parent="275" name="tags_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>65569</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>818</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="295" parent="275" name="ukt48xdq560gs3gap9g7jg36kgc">
+      <ColNames>name</ColNames>
+      <ObjectId>65571</ObjectId>
+      <StateNumber>820</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="296" parent="275" name="tags_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>65570</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>818</StateNumber>
+      <UnderlyingIndexId>65569</UnderlyingIndexId>
+    </key>
+    <key id="297" parent="275" name="ukt48xdq560gs3gap9g7jg36kgc">
+      <ObjectId>65572</ObjectId>
+      <StateNumber>820</StateNumber>
+      <UnderlyingIndexId>65571</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

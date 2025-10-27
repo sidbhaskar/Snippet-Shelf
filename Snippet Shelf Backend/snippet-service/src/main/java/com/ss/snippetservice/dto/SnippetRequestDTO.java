@@ -5,7 +5,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
+import java.util.List;
 import java.util.UUID;
 
 public class SnippetRequestDTO {
@@ -26,6 +26,10 @@ public class SnippetRequestDTO {
 
     @NotBlank(message = "Source Code is required")
     private String sourceCode;
+
+    private boolean favorite;
+
+    private List<String> tags;
 
     public UUID getId() {
         return id;
@@ -65,5 +69,21 @@ public class SnippetRequestDTO {
 
     public void setSourceCode(String sourceCode) {
         this.sourceCode = sourceCode;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
     }
 }

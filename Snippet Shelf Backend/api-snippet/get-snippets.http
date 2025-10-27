@@ -1,4 +1,10 @@
 ### GET request to get all snippets
-GET http://localhost:4001/snippet
+GET http://localhost:4001/api/snippets/all
+
+###### GET snippet by ID
+GET http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+
+##### GET snippet by favorites
+GET http://localhost:4001/api/snippets/favorites
 
 ###

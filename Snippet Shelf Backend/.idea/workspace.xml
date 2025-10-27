@@ -5,23 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82721979-172e-4cb0-89b1-02f7c40a6a3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-snippet/create-snippet.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-snippet/delete-snippet.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-snippet/get-snippets.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-snippet/put-snippet.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/controller/SnippetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/model/Snippet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/repository/SnippetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/service/SnippetService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/mapper/SnippetMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/resources/sql.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/exception/SnippetNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/model/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/repository/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7517867-50f6-4fd0-a754-a4752008cfd3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7517867-50f6-4fd0-a754-a4752008cfd3/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7517867-50f6-4fd0-a754-a4752008cfd3/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7517867-50f6-4fd0-a754-a4752008cfd3/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7517867-50f6-4fd0-a754-a4752008cfd3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d3c4d062-a97d-41de-9981-6cd9e7b3c305.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d3c4d062-a97d-41de-9981-6cd9e7b3c305.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d3c4d062-a97d-41de-9981-6cd9e7b3c305/storage_v2/_src_/database/db.fgwAAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d3c4d062-a97d-41de-9981-6cd9e7b3c305/storage_v2/_src_/database/db.fgwAAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippet-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-snippet/create-snippet.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-snippet/create-snippet.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-snippet/get-snippets.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-snippet/get-snippets.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-snippet/put-snippet.http" beforeDir="false" afterPath="$PROJECT_DIR$/api-snippet/put-snippet.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/controller/SnippetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/controller/SnippetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/dto/SnippetResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/mapper/SnippetMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/mapper/SnippetMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/model/Snippet.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/model/Snippet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/repository/SnippetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/repository/SnippetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/service/SnippetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/snippet-service/src/main/java/com/ss/snippetservice/service/SnippetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,9 +61,9 @@
     &quot;accountId&quot;: &quot;7005b5ff-039c-438a-9c69-ccc8bc9af9ae&quot;
   }
 }</component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -81,7 +91,10 @@
     "Docker.snippet_db.executor": "Run",
     "HTTP Request.create-snippet | POST request to create a new snippet.executor": "Run",
     "HTTP Request.delete-snippet | DELETE request to remove a snippet.executor": "Run",
+    "HTTP Request.get-snippets | #2.executor": "Run",
     "HTTP Request.get-snippets | GET request to get all snippets.executor": "Run",
+    "HTTP Request.get-snippets | GET snippet by favorites.executor": "Run",
+    "HTTP Request.put-snippet | put request to update a snippet.executor": "Run",
     "HTTP Request.update-snippet | put request to update a snippet.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -91,6 +104,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.SnippetServiceApplication.executor": "Run",
     "Spring Boot.SnippetShelfBackendApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
@@ -126,26 +140,30 @@
           <value>
             <map>
               <entry key="create-snippet | POST request to create a new snippet" value="STOPPED" />
-              <entry key="delete-snippet | DELETE request to remove a snippet" value="STOPPED" />
+              <entry key="get-snippets | #2" value="STOPPED" />
               <entry key="get-snippets | GET request to get all snippets" value="STOPPED" />
-              <entry key="update-snippet | put request to update a snippet" value="STOPPED" />
+              <entry key="get-snippets | GET snippet by favorites" value="STOPPED" />
+              <entry key="put-snippet | put request to update a snippet" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.delete-snippet | DELETE request to remove a snippet">
+  <component name="RunManager" selected="Spring Boot.SnippetServiceApplication">
     <configuration name="create-snippet | POST request to create a new snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/create-snippet.http" executionIdentifier="POST request to create a new snippet" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="delete-snippet | DELETE request to remove a snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/delete-snippet.http" executionIdentifier="DELETE request to remove a snippet" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="get-snippets | GET request to get all snippets" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/get-snippets.http" executionIdentifier="GET request to get all snippets" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="update-snippet | put request to update a snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/update-snippet.http" executionIdentifier="put request to update a snippet" runType="Run single request">
+    <configuration name="get-snippets | GET snippet by favorites" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/get-snippets.http" executionIdentifier="GET snippet by favorites" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="get-snippets | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/get-snippets.http" executionIdentifier="#2" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="put-snippet | put request to update a snippet" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api-snippet/put-snippet.http" executionIdentifier="put request to update a snippet" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="SnippetServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -161,34 +179,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="snippet-service.snippet-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="snippet-db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="snippet-service/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.snippet-service.snippet-db: Compose Deployment" />
+      <item itemvalue="HTTP Request.get-snippets | #2" />
+      <item itemvalue="HTTP Request.get-snippets | GET snippet by favorites" />
+      <item itemvalue="HTTP Request.put-snippet | put request to update a snippet" />
       <item itemvalue="HTTP Request.create-snippet | POST request to create a new snippet" />
-      <item itemvalue="HTTP Request.delete-snippet | DELETE request to remove a snippet" />
       <item itemvalue="HTTP Request.get-snippets | GET request to get all snippets" />
-      <item itemvalue="HTTP Request.update-snippet | put request to update a snippet" />
       <item itemvalue="Spring Boot.SnippetServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.delete-snippet | DELETE request to remove a snippet" />
-        <item itemvalue="HTTP Request.update-snippet | put request to update a snippet" />
-        <item itemvalue="HTTP Request.create-snippet | POST request to create a new snippet" />
+        <item itemvalue="HTTP Request.get-snippets | GET snippet by favorites" />
+        <item itemvalue="HTTP Request.put-snippet | put request to update a snippet" />
+        <item itemvalue="HTTP Request.get-snippets | #2" />
         <item itemvalue="HTTP Request.get-snippets | GET request to get all snippets" />
-        <item itemvalue="Docker.snippet-service.snippet-db: Compose Deployment" />
+        <item itemvalue="HTTP Request.create-snippet | POST request to create a new snippet" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +213,9 @@
       <option name="presentableId" value="Default" />
       <updated>1761215402942</updated>
       <workItem from="1761215404104" duration="10534000" />
-      <workItem from="1761480750576" duration="4536000" />
+      <workItem from="1761480750576" duration="6381000" />
+      <workItem from="1761543117325" duration="881000" />
+      <workItem from="1761568468477" duration="8828000" />
     </task>
     <servers />
   </component>
