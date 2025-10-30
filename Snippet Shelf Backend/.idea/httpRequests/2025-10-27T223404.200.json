@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "id": "6dfa02db-fc67-486e-8265-02eb577a0fc6",
+      "title": "Array Utilities",
+      "description": "Useful array manipulation functions",
+      "language": "JavaScript",
+      "sourceCode": "const unique = arr => [...new Set(arr)];",
+      "tags": [
+        "arrays",
+        "utilities",
+        "javascript"
+      ],
+      "favorite": false,
+      "createdDate": "2025-10-27"
+    },
+    {
+      "id": "28e701c4-406e-4e91-a235-304100bb5bde",
+      "title": "new Code",
+      "description": "Useful array manipulation functions in java",
+      "language": "Java",
+      "sourceCode": "const unique = arr => [...new Set(arr)];",
+      "tags": [
+        "java"
+      ],
+      "favorite": true,
+      "createdDate": "2025-10-27"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 6,
+    "sort": {
+      "sorted": true,
+      "empty": false,
+      "unsorted": false
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 2,
+  "totalPages": 1,
+  "last": true,
+  "size": 6,
+  "number": 0,
+  "sort": {
+    "sorted": true,
+    "empty": false,
+    "unsorted": false
+  },
+  "numberOfElements": 2,
+  "first": true,
+  "empty": false
+}
