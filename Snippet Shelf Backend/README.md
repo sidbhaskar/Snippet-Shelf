@@ -64,16 +64,16 @@ It’s designed to illustrate **real-world microservice communication** patterns
 
 # Technology Stack
 
-| Layer                       | Technology                                    |
-|-----------------------------|-----------------------------------------------|
-| Language                    | Java 17                                       |
-| Framework                   | Spring Boot 3.x                               |
-| Inter-Service Communication | gRPC                                          |
-| Messaging                   | Apache Kafka                                  |
-| Authentication              | Spring Security + JWT                         |
-| API Gateway                 | Spring Cloud Gateway                          |
-| Database                    | PostgreSQL / H2 (for development)             |
-| Containerization            | Docker                                        |
-| Build Tool                  | Maven                                         |
-| Testing                     | JUnit 5, Spring Boot Test                     |
-| Documentation               | OpenAPI (Swagger)                             |
+| Layer                       | Technology                        |
+|-----------------------------|-----------------------------------|
+| Language                    | Java 21                            |
+| Framework                   | Spring Boot 3.x                   |
+| Inter-Service Communication | gRPC                              |
+| Messaging                   | Apache Kafka                      |
+| Authentication              | Spring Security + JWT             |
+| API Gateway                 | Spring Cloud Gateway              |
+| Database                    | PostgreSQL / H2 (for development) |
+| Containerization            | Docker                            |
+| Build Tool                  | Maven                             |
+| Testing                     | JUnit 5, Spring Boot Test         |
+| Documentation               | OpenAPI (Swagger)                 |
