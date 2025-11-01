@@ -17,6 +17,7 @@ public class Snippet {
 
     @NotNull
     @Column(name = "owner_id", nullable = false)
+    // TODO: change long to uuid later after implementing auth
     private Long ownerId;
 
     @NotNull
