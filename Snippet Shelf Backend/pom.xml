@@ -21,6 +21,7 @@
         <module>activity-service</module>
         <module>collection-service</module>
         <module>snippet-service</module>
+        <module>api-gateway</module>
     </modules>
 
     <dependencyManagement>
