@@ -22,6 +22,7 @@
         <module>collection-service</module>
         <module>snippet-service</module>
         <module>api-gateway</module>
+        <module>auth-service</module>
     </modules>
 
     <dependencyManagement>

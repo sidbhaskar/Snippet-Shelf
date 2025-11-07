@@ -1,0 +1,24 @@
+server:
+  port: 4004
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: auth-service-route
+              uri: http://auth-service:4005
+              predicates:
+                - Path=/auth/**
+              filters:
+                - StripPrefix=1
+
+            # Route for /api/snippet/** to snippet-service
+            - id: patient-service-route
+              uri: http://snippet-service:4001
+              predicates:
+                - Path=/api/snippet/**
+              filters:
+                - StripPrefix=1
+                - JwtValidation
