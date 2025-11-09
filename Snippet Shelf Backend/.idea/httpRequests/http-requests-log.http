@@ -1,0 +1,36 @@
+GET http://localhost:4001/api/snippets/favorites
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-09T224548.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-09T224545.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-09T224540.200.json
+
+###
+
+GET http://localhost:4001/api/snippets?sort=recent&limit=6&offset=0
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-09T224527.200.json
+
+###
+
