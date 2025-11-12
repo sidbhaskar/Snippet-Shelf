@@ -1,5 +1,6 @@
 ### POST request to create a new snippet
 POST http://localhost:4001/api/snippets
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {

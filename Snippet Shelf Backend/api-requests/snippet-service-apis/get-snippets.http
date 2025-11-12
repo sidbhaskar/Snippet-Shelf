@@ -1,13 +1,16 @@
 ### GET request to get snippets pagination
 GET http://localhost:4001/api/snippets?sort=recent&limit=6&offset=0
+Authorization: Bearer {{token}}
 
 ### GET request to get all snippets
 GET http://localhost:4001/api/snippets/all
+Authorization: Bearer {{token}}
 
-###### GET snippet by ID
+### GET snippet by ID
 GET http://localhost:4001/api/snippets/28e701c4-406e-4e91-a235-304100bb5bde
+Authorization: Bearer {{token}}
 
-##### GET snippet by favorites
+### GET snippet by favorites
 GET http://localhost:4001/api/snippets/favorites
-
+Authorization: Bearer {{token}}
 ###

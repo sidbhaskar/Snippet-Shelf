@@ -1,3 +1,82 @@
+GET http://localhost:4001/api/snippets/all
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105808.200.json
+
+###
+
+POST http://localhost:4001/api/snippets
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
+Content-Type: application/json
+Content-Length: 246
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": ["javascript", "utilities", "arrays"],
+  "favorite": false
+}
+
+<> 2025-11-12T105752.201.json
+
+###
+
+GET http://localhost:4001/api/snippets/favorites
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105349.200.json
+
+###
+
+GET http://localhost:4001/api/snippet/favorites
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105335.500.json
+
+###
+
+GET http://localhost:4001/api/snippet/all
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105303.500.json
+
+###
+
+GET http://localhost:4001/api/snippets?sort=recent&limit=6&offset=0
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105055.200.json
+
+###
+
+GET http://localhost:4001/api/snippets/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-11-12T105047.200.json
+
+###
+
 GET http://localhost:4010/auth/validate
 Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MjkyNDQ1MSwiZXhwIjoxNzYyOTYwNDUxfQ.1Wkec970QMLBDSIMn74UmYIk2qMDVSWlufzHrWh-tkFElVXEXHgNkGLhzKMA2a_n
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
