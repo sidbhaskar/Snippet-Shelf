@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  # --- API Gateway Service ---
+  api-gateway:
+    build:
+      context: ./api-gateway # Path to api-gateway's Dockerfile
+      dockerfile: Dockerfile
+    image: api-gateway:latest
+    container_name: api-gateway
+    ports:
+      - "4010:4010" # Host:Container (Make sure this matches your fix)
+    environment:
+      - AUTH_SERVICE_URL=http://auth-service:4011
+      - SNIPPET_SERVICE_URL=http://snippet-service:4001 # You'll need this later
+    networks:
+      - internal
+    depends_on:
+      - auth-service
+      - snippet-service
+
+  # --- Auth Service ---
+  auth-service:
+    build:
+      context: ./auth-service # Path to auth-service's Dockerfile
+      dockerfile: Dockerfile
+    image: auth-service:latest
+    container_name: auth-service
+    environment:
+      - JWT_SECRET=dGhpcy1pcy1hLXNlY3JldC1rZXktZm9yLWp3dC1hdXRoZW50aWNhdGlvbi1leGFtcGxlCg==
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://auth-service-ss-db:5432/db
+      - SPRING_DATASOURCE_USERNAME=admin_user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_SQL_INIT_MODE=always
+    networks:
+      - internal
+    depends_on:
+      - auth-service-ss-db
+
+  # --- Auth Service Database ---
+  auth-service-ss-db:
+    image: postgres:latest
+    container_name: auth-service-ss-db
+    ports:
+      - "5002:5432"
+    environment:
+      - POSTGRES_USER=admin_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    volumes:
+      - auth-db-data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  # --- Snippet Service ---
+  snippet-service:
+    build:
+      context: ./snippet-service # Path to snippet-service's Dockerfile
+      dockerfile: Dockerfile
+    container_name: snippet-service
+    restart: always
+    environment:
+      SERVER_PORT: 4001
+      SPRING_DATASOURCE_URL: jdbc:postgresql://snippet-db:5432/db
+      SPRING_DATASOURCE_USERNAME: admin_user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_SQL_INIT_MODE: always
+    ports:
+      - "4001:4001"
+    networks:
+      - internal
+    depends_on:
+      - snippet-db
+
+  # --- Snippet Service Database ---
+  snippet-db:
+    image: postgres:latest
+    container_name: snippet-db
+    restart: always
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: admin_user
+      POSTGRES_PASSWORD: password
+      TZ: Asia/Kolkata
+    ports:
+      - "5001:5432"
+    volumes:
+      - snippet_db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+# --- Define the shared network and volumes ---
+networks:
+  internal:
+    driver: bridge
+
+volumes:
+  auth-db-data:
+  snippet_db_data:
