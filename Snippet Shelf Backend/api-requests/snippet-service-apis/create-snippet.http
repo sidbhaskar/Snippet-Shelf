@@ -13,3 +13,16 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:4001/api/snippets
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "new user 2",
+  "description": "new user 2",
+  "language": "Java",
+  "sourceCode": "new user 2",
+  "tags": ["javas", "utilities", "arrays"],
+  "favorite": true
+}
+###

@@ -1,0 +1,14 @@
+{
+  "id": "a8fab72f-758a-4738-9a55-16671bda2a40",
+  "title": "Array Utilities",
+  "description": "Useful array manipulation functions",
+  "language": "JavaScript",
+  "sourceCode": "const unique = arr => [...new Set(arr)];",
+  "tags": [
+    "arrays",
+    "utilities",
+    "javascript"
+  ],
+  "favorite": false,
+  "createdDate": "2025-11-15"
+}

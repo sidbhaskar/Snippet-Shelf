@@ -1,0 +1,9 @@
+### Register request to example server
+POST http://localhost:4010/auth/register
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "SecurePass123!",
+  "role": "USER"
+}
