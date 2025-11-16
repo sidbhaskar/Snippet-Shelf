@@ -17,8 +17,7 @@ public class Snippet {
 
     @NotNull
     @Column(name = "owner_id", nullable = false)
-    // TODO: change long to uuid later after implementing auth
-    private Long ownerId;
+    private UUID ownerId;
 
     @NotNull
     @Column(nullable = false)
@@ -63,11 +62,11 @@ public class Snippet {
         this.id = id;
     }
 
-    public Long getOwnerId() {
+    public UUID getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
+    public void setOwnerId(UUID ownerId) {
         this.ownerId = ownerId;
     }
 

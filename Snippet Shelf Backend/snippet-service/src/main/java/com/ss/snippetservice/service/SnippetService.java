@@ -30,53 +30,44 @@ public class SnippetService {
         this.tagService = tagService;
     }
 
-    /**
-     * Get all snippets (will be replaced with owner filtering when auth is implemented)
-     */
-    public List<SnippetResponseDTO> getSnippets() {
-        List<Snippet> snippetsList = snippetRepository.findAll();
+    // Get all snippets
+    @Transactional(readOnly = true)
+    public List<SnippetResponseDTO> getSnippets(UUID userId) {
+        List<Snippet> snippetsList = snippetRepository.findByOwnerId(userId);
         return snippetsList.stream()
                 .map(SnippetMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Get snippets with pagination and sorting
-     * @param sort - "recent" or "popular" (for now, only recent is implemented)
-     * @param limit - number of snippets per page
-     * @param offset - number of snippets to skip
-     */
-    public Page<SnippetResponseDTO> getSnippets(String sort, int limit, int offset) {
-        Sort sortOrder = "recent".equals(sort)
-                ? Sort.by(Sort.Direction.DESC, "createdDate")
-                : Sort.by(Sort.Direction.DESC, "createdDate"); // TODO: implement "popular" sorting
+    // Get snippets with pagination and sorting for a specific user
+    @Transactional(readOnly = true)
+    public Page<SnippetResponseDTO> getSnippets(UUID userId,String sort, int limit, int offset) {
+        Sort sortOrder = Sort.by(Sort.Direction.DESC, "createdDate");
+
+//        Sort sortOrder = "recent".equals(sort)
+//                ? Sort.by(Sort.Direction.DESC, "createdDate")
+//                : Sort.by(Sort.Direction.DESC, "createdDate");
 
         Pageable pageable = PageRequest.of(offset / limit, limit, sortOrder);
-        Page<Snippet> snippetPage = snippetRepository.findAll(pageable);
+        Page<Snippet> snippetPage = snippetRepository.findByOwnerId(userId,pageable);
 
         return snippetPage.map(SnippetMapper::toDTO);
     }
 
-    /**
-     * Get snippet by ID
-     */
-    public SnippetResponseDTO getSnippetById(UUID id) {
-        Snippet snippet = snippetRepository.findById(id)
+
+     // Get snippet by ID (only if owned by user)
+     @Transactional(readOnly = true)
+    public SnippetResponseDTO getSnippetById(UUID id, UUID userId) {
+        Snippet snippet = snippetRepository.findByIdAndOwnerId(id, userId)
                 .orElseThrow(() -> new SnippetNotFoundException("Snippet not found with id: " + id));
         return SnippetMapper.toDTO(snippet);
     }
 
-    /**
-     * Create a new snippet with tags
-     */
+     // Create a new snippet with tags
     @Transactional
-    public SnippetResponseDTO createSnippet(SnippetRequestDTO snippetRequestDTO) {
-        // Convert DTO to entity
+    public SnippetResponseDTO createSnippet(SnippetRequestDTO snippetRequestDTO, UUID userId) {
         Snippet snippet = SnippetMapper.toEntity(snippetRequestDTO);
-
-        // TODO: Set owner_id from JWT token when auth is implemented
-        // For now, using a default value
-        snippet.setOwnerId(1L); // placeholder
+        snippet.setOwnerId(userId);
 
         // Handle tags: get or create them
         if (snippetRequestDTO.getTags() != null && !snippetRequestDTO.getTags().isEmpty()) {
@@ -96,18 +87,13 @@ public class SnippetService {
      * Update an existing snippet
      */
     @Transactional
-    public SnippetResponseDTO updateSnippet(SnippetRequestDTO snippetRequestDTO, UUID id) {
+    public SnippetResponseDTO updateSnippet(SnippetRequestDTO snippetRequestDTO, UUID id, UUID userId) {
         // Find existing snippet
-        Snippet existingSnippet = snippetRepository.findById(id)
+        Snippet existingSnippet = snippetRepository.findByIdAndOwnerId(id, userId)
                 .orElseThrow(() -> new SnippetNotFoundException("Snippet not found with id: " + id));
 
-        // TODO: Verify ownership when auth is implemented
-        // if (!existingSnippet.getOwnerId().equals(currentUserId)) throw new ForbiddenException();
-
-        // Update snippet fields
         SnippetMapper.updateEntity(existingSnippet, snippetRequestDTO);
 
-        // Update tags if provided
         if (snippetRequestDTO.getTags() != null) {
             Set<Tag> updatedTags = tagService.getOrCreateTags(snippetRequestDTO.getTags());
             existingSnippet.setTags(updatedTags);
@@ -125,25 +111,19 @@ public class SnippetService {
      * Delete a snippet by ID
      */
     @Transactional
-    public void deleteSnippet(UUID id) {
+    public void deleteSnippet(UUID id, UUID userId) {
         // Verify snippet exists
-        Snippet snippet = snippetRepository.findById(id)
+        Snippet snippet = snippetRepository.findByIdAndOwnerId(id, userId)
                 .orElseThrow(() -> new SnippetNotFoundException("Snippet not found with id: " + id));
-
-        // TODO: Verify ownership when auth is implemented
-        // if (!snippet.getOwnerId().equals(currentUserId)) throw new ForbiddenException();
-
         snippetRepository.deleteById(id);
 
         // TODO: Emit Kafka event (snippet.deleted) when event system is implemented
     }
 
-    /**
-     * Toggle favorite status for a snippet
-     */
+     // Toggle favorite status for a snippet
     @Transactional
-    public SnippetResponseDTO toggleFavorite(UUID id) {
-        Snippet snippet = snippetRepository.findById(id)
+    public SnippetResponseDTO toggleFavorite(UUID id, UUID userId) {
+        Snippet snippet = snippetRepository.findByIdAndOwnerId(id, userId)
                 .orElseThrow(() -> new SnippetNotFoundException("Snippet not found with id: " + id));
 
         snippet.setFavorite(!snippet.isFavorite());
@@ -152,25 +132,23 @@ public class SnippetService {
         return SnippetMapper.toDTO(updatedSnippet);
     }
 
-    /**
-     * Get all favorite snippets
-     */
-    public List<SnippetResponseDTO> getFavoriteSnippets() {
-        List<Snippet> snippets = snippetRepository.findAll();
+
+    // Get all favorite snippets
+    @Transactional(readOnly = true)
+    public List<SnippetResponseDTO> getFavoriteSnippets(UUID userId) {
+        List<Snippet> snippets = snippetRepository.findByOwnerIdAndFavoriteTrue(userId);
         return snippets.stream()
                 .filter(Snippet::isFavorite)
                 .map(SnippetMapper::toDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Search snippets by tag name
-     */
-    public List<SnippetResponseDTO> searchByTag(String tagName) {
-        // This will need a custom query in the repository
-        // For now, filtering in memory (not recommended for production)
+
+    // Search snippets by tag name
+    @Transactional(readOnly = true)
+    public List<SnippetResponseDTO> searchByTag(String tagName, UUID userId) {
         String normalizedTag = tagName.trim().toLowerCase();
-        List<Snippet> snippets = snippetRepository.findAll();
+        List<Snippet> snippets = snippetRepository.findByOwnerId(userId);
 
         return snippets.stream()
                 .filter(snippet -> snippet.getTags().stream()
@@ -182,8 +160,9 @@ public class SnippetService {
     /**
      * Search snippets by language
      */
-    public List<SnippetResponseDTO> searchByLanguage(String language) {
-        List<Snippet> snippets = snippetRepository.findAll();
+    @Transactional(readOnly = true)
+    public List<SnippetResponseDTO> searchByLanguage(String language, UUID userId) {
+        List<Snippet> snippets = snippetRepository.findByOwnerId(userId);
 
         return snippets.stream()
                 .filter(snippet -> snippet.getLanguage().equalsIgnoreCase(language))

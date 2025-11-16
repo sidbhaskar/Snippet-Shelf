@@ -4,15 +4,16 @@ services:
   # --- API Gateway Service ---
   api-gateway:
     build:
-      context: ./api-gateway # Path to api-gateway's Dockerfile
+      context: ./api-gateway
       dockerfile: Dockerfile
     image: api-gateway:latest
     container_name: api-gateway
     ports:
-      - "4010:4010" # Host:Container (Make sure this matches your fix)
+      - "4010:4010"
     environment:
+      - JWT_SECRET=dGhpcy1pcy1hLXNlY3JldC1rZXktZm9yLWp3dC1hdXRoZW50aWNhdGlvbi1leGFtcGxlCg==
       - AUTH_SERVICE_URL=http://auth-service:4011
-      - SNIPPET_SERVICE_URL=http://snippet-service:4001 # You'll need this later
+      - SNIPPET_SERVICE_URL=http://snippet-service:4001
     networks:
       - internal
     depends_on:

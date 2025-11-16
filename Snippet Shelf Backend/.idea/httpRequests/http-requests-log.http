@@ -1,3 +1,40 @@
+POST http://localhost:4001/api/snippets
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInVzZXJJRCI6IjIyM2U0NTY3LWU4OWItMTJkMy1hNDU2LTQyNjYxNDE3NDAwNiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzI2NzY1MywiZXhwIjoxNzYzMzAzNjUzfQ.yyJ5zf4E7zjgGbLbYa5FGxAW2g43m1hj-EvIiPxhlKCQjofDuTVu4I-Us-Ke9hzZ
+Content-Type: application/json
+Content-Length: 174
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "title": "new user 2",
+  "description": "new user 2",
+  "language": "Java",
+  "sourceCode": "new user 2",
+  "tags": ["javas", "utilities", "arrays"],
+  "favorite": true
+}
+
+<> 2025-11-16T101535.500.json
+
+###
+
+POST http://localhost:4010/auth/login
+Content-Type: application/json
+Content-Length: 68
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "email" : "testuser@test.com",
+    "password": "password123"
+}
+
+<> 2025-11-16T100413.200.json
+
+###
+
 GET http://localhost:4001/api/snippets/all
 Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2MzIxMzY4MiwiZXhwIjoxNzYzMjQ5NjgyfQ.0_DwILzMugpHlT_p3b2WYu_XX3GPvdRYWE-6jJFb03mIH3noVNamU8i2KeW2Vc8I
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.2.2

@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>763</IntrospectionStateNumber>
+      <IntrospectionStateNumber>762</IntrospectionStateNumber>
       <ServerVersion>18.0</ServerVersion>
-      <StartupTime>1763212188</StartupTime>
+      <StartupTime>1763267560</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -707,7 +699,7 @@ false posixrules
 13293||10|C|G
 13293||-9223372036854775808|U|G
 13293||10|U|G</Grants>
-      <IntrospectionStateNumber>763</IntrospectionStateNumber>
+      <IntrospectionStateNumber>762</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>admin_user</OwnerName>
     </database>
@@ -4228,11 +4220,11 @@ false posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>763</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>763</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>763</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>762</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>762</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>762</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-15.13:18:19</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-16.04:33:35</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4342,8 +4334,8 @@ tag_id</ColNames>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>755</StateNumber>
-      <StoredType>bigint|0s</StoredType>
-      <TypeId>20</TypeId>
+      <StoredType>uuid|0s</StoredType>
+      <TypeId>2950</TypeId>
     </column>
     <column id="288" parent="274" name="source_code">
       <NotNull>1</NotNull>
