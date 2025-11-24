@@ -1,10 +1,10 @@
-package com.ss.activityservice;
+package com.ss.userservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ActivityServiceApplicationTests {
+class UserServiceApplicationTests {
 
     @Test
     void contextLoads() {

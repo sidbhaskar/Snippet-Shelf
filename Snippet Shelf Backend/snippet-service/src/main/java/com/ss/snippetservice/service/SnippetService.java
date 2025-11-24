@@ -2,6 +2,7 @@ package com.ss.snippetservice.service;
 
 import com.ss.snippetservice.dto.SnippetRequestDTO;
 import com.ss.snippetservice.dto.SnippetResponseDTO;
+import com.ss.snippetservice.dto.SnippetStatisticsDTO;
 import com.ss.snippetservice.exception.SnippetNotFoundException;
 import com.ss.snippetservice.model.Snippet;
 import com.ss.snippetservice.model.Tag;
@@ -14,9 +15,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -168,5 +167,48 @@ public class SnippetService {
                 .filter(snippet -> snippet.getLanguage().equalsIgnoreCase(language))
                 .map(SnippetMapper::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public SnippetStatisticsDTO getStatistics(UUID userId) {
+        // Count total snippets
+        long totalSnippets = snippetRepository.countByOwnerId(userId);
+
+        // Count favorites
+        long totalFavorites = snippetRepository.countByOwnerIdAndFavoriteTrue(userId);
+
+        // Count distinct tags used
+        long totalTags = snippetRepository.countDistinctTagsByOwnerId(userId);
+
+        // Get language counts
+        List<Object[]> languageData = snippetRepository.countSnippetsByLanguage(userId);
+        Map<String, Long> languageCounts = languageData.stream()
+                .collect(Collectors.toMap(
+                        row -> (String) row[0],
+                        row -> (Long) row[1],
+                        (a, b) -> a,
+                        LinkedHashMap::new
+                ));
+
+        // Get tag counts (optional - for showing popular tags)
+        Map<String, Long> tagCounts = getTagCountsForUser(userId);
+
+        return new SnippetStatisticsDTO(totalSnippets, totalFavorites, totalTags, languageCounts, tagCounts);
+    }
+
+    /**
+     * Helper method to get tag counts for a user
+     */
+//    @Transactional(readOnly = true)
+    private Map<String, Long> getTagCountsForUser(UUID userId) {
+        List<Snippet> snippets = snippetRepository.findByOwnerId(userId);
+
+        return snippets.stream()
+                .flatMap(snippet -> snippet.getTags().stream())
+                .collect(Collectors.groupingBy(
+                        tag -> tag.getName(),
+                        LinkedHashMap::new,
+                        Collectors.counting()
+                ));
     }
 }

@@ -2,6 +2,7 @@ package com.ss.snippetservice.controller;
 
 import com.ss.snippetservice.dto.SnippetRequestDTO;
 import com.ss.snippetservice.dto.SnippetResponseDTO;
+import com.ss.snippetservice.dto.SnippetStatisticsDTO;
 import com.ss.snippetservice.service.SnippetService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -163,5 +164,15 @@ public class SnippetController {
         UUID userId = UUID.fromString(userIdHeader);
         List<SnippetResponseDTO> snippets = snippetService.searchByLanguage(language, userId);
         return ResponseEntity.ok(snippets);
+    }
+
+    @GetMapping("/statistics")
+    @Operation(summary = "Get snippet statistics for authenticated user")
+    public ResponseEntity<SnippetStatisticsDTO> getStatistics(
+            @RequestHeader("X-User-Id") String userIdHeader
+    ) {
+        UUID userId = UUID.fromString(userIdHeader);
+        SnippetStatisticsDTO statistics = snippetService.getStatistics(userId);
+        return ResponseEntity.ok(statistics);
     }
 }

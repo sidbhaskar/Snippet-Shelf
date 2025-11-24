@@ -16,9 +16,15 @@
     <properties>
         <java.version>21</java.version>
         <spring-boot.version>3.2.0</spring-boot.version> </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
 
     <modules>
-        <module>activity-service</module>
+        <module>user-service</module>
         <module>collection-service</module>
         <module>snippet-service</module>
         <module>api-gateway</module>
